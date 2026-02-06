@@ -1,0 +1,114 @@
+<!-- Navigation -->
+<nav>
+  <div class="logo">&lt;IA /&gt;</div>
+  <ul class="nav-links">
+    <li *ngFor="let item of navItems">
+      <a (click)="scrollToSection(item.id)" [href]="'#' + item.id">{{ item.label }}</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-label">👋 Full Stack Developer</div>
+    <h1>Building <span class="gradient-text">intelligent systems</span> with modern tech</h1>
+    <p>Software Engineer specializing in LLM-powered applications, data pipelines, and scalable full-stack solutions. Currently at Samsung R&D.</p>
+    <div class="cta-buttons">
+      <a (click)="scrollToSection('contact')" href="#contact" class="btn btn-primary">Get in Touch</a>
+      <a (click)="scrollToSection('projects')" href="#projects" class="btn btn-secondary">View Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+  <div class="section-header">
+    <div class="section-label">// MY JOURNEY</div>
+    <h2>Work Experience</h2>
+    <p class="section-description">Building production systems and solving real-world problems with technology</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item" *ngFor="let exp of experience">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-title">{{ exp.title }}</div>
+          <div class="timeline-company">{{ exp.company }}</div>
+        </div>
+        <div class="timeline-date">{{ exp.date }}</div>
+      </div>
+      <ul>
+        <li *ngFor="let highlight of exp.highlights">{{ highlight }}</li>
+      </ul>
+      <div class="skill-tags" style="margin-top: 1.5rem;">
+        <span class="skill-tag" *ngFor="let tech of exp.technologies">{{ tech }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+  <div class="section-header">
+    <div class="section-label">// TECH STACK</div>
+    <h2>Skills & Technologies</h2>
+    <p class="section-description">Tools and technologies I work with to build scalable solutions</p>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-category" *ngFor="let skill of skills">
+      <h3>{{ skill.category }}</h3>
+      <div class="skill-tags">
+        <span class="skill-tag" *ngFor="let item of skill.items">{{ item }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <div class="section-header">
+    <div class="section-label">// FEATURED WORK</div>
+    <h2>Projects</h2>
+    <p class="section-description">Side projects and experiments I've built</p>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects">
+      <div class="project-header">
+        <div class="project-icon">{{ project.icon }}</div>
+      </div>
+      <div class="project-title">{{ project.title }}</div>
+      <div class="project-tech">{{ project.tech }}</div>
+      <div class="project-description">{{ project.description }}</div>
+      <div class="skill-tags">
+        <span class="skill-tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="contact-content">
+    <div class="section-label">// GET IN TOUCH</div>
+    <h2>Let's Connect</h2>
+    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+    <div class="cta-buttons">
+      <a href="mailto:sample@gmail.com" class="btn btn-primary">Email Me</a>
+    </div>
+    <div class="contact-links">
+      <a *ngFor="let link of contactLinks" [href]="link.url" class="contact-link">
+        <span>{{ link.icon }}</span> {{ link.label }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>Designed & Built by Iresh Agrawal • 2024</p>
+  <p style="margin-top: 0.5rem; font-size: 0.9rem;">Made with Angular, TypeScript, and attention to detail</p>
+</footer>

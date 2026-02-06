@@ -69,9 +69,11 @@ export const PROJECT_LIST: Project[] = [
 
   // Contact links
 export const CONTACT_LINKS = [
-    { icon: '🔗', label: 'LinkedIn', url: '#' },
-    { icon: '💻', label: 'GitHub', url: '#' },
-    { icon: '📊', label: 'LeetCode', url: '#' }
+    { icon: '🔗', label: 'LinkedIn', url: 'https://www.linkedin.com/in/ireshagrawal/' },
+    { icon: '💻', label: 'GitHub', url: 'https://github.com/im-iresh' },
+    { icon: '📊', label: 'LeetCode', url: 'https://leetcode.com/u/iresh061/' }
   ];
 
 export const WEBSITE_TITLE = 'Iresh Agrawal - Portfolio';
+
+export const EMAIL_ID = 'ireshcareer@gmail.com'

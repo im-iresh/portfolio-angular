@@ -6,23 +6,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --bg-primary: #0a0e27;
-  --bg-secondary: #131729;
-  --accent: #00d9ff;
-  --accent-soft: #4a9eff;
-  --text-primary: #e8edf4;
-  --text-secondary: #9ba3b4;
-  --border: rgba(255, 255, 255, 0.1);
-}
-
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg-primary);
-  color: var(--text-primary);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
 
 /* Navigation */
 nav {

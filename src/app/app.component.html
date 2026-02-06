@@ -96,13 +96,15 @@
     <div class="section-label">// GET IN TOUCH</div>
     <h2>Let's Connect</h2>
     <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-    <div class="cta-buttons">
-      <a href="mailto:sample@gmail.com" class="btn btn-primary">Email Me</a>
+    <div class="cta-buttons df df-center">
+      <a target="_blank" [href]="'mailto:'+emailId" class="btn btn-primary">Email Me</a>
     </div>
     <div class="contact-links">
-      <a *ngFor="let link of contactLinks" [href]="link.url" class="contact-link">
-        <span>{{ link.icon }}</span> {{ link.label }}
-      </a>
+      @for(link of contactLinks;track link){
+        <a target="_blank" [href]="link.url" class="contact-link">
+          <span>{{ link.icon }}</span> {{ link.label }}
+        </a>
+      }      
     </div>
   </div>
 </section>

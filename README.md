@@ -21,11 +21,11 @@ portfolio-angular/
 │   ├── app/
 │   │   ├── app.component.ts       # Main component logic
 │   │   ├── app.component.html     # Template
-│   │   ├── app.component.css      # Component styles
+│   │   ├── app.component.scss      # Component styles
 │   │   └── app.module.ts          # App module
 │   ├── index.html                 # Main HTML file
 │   ├── main.ts                    # Bootstrap file
-│   └── styles.css                 # Global styles
+│   └── styles.scss                 # Global styles
 ├── angular.json                   # Angular CLI config
 ├── package.json                   # Dependencies
 └── tsconfig.json                  # TypeScript config
